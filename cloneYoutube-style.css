@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+html{
+    width: 100%;
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+header{
+    font-size: 3rem;
+    background-color: rgb(33, 33, 33);
+    height: 6rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    width: 100%;
+    position: fixed;
+}
+a {
+    text-decoration: none;
+}
+.wrap{
+    /*width 없애고 display:flex는 header로 옮기고, 대신 absolute position하기*/
+    display: flex;
+    justify-content: space-between;
+}
+.header_menu{
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.header_menu .material-icons{
+    margin-right: 1.5rem;
+}
+.header-logo{
+    width: 10vh;
+}
+.header_search-bar{
+    flex-shrink: 0;
+    flex-grow: 3;
+}
+input[type=text] {
+    width: 70%;
+    height: 2.5vh;
+    background-color: rgb(24, 24, 24);
+    border: 0px;
+    font-size: 1.5rem;
+}
+.header_extra-menu{
+    /*flex-basis / shrink / grow 다시 알아보기
+    이걸로 줄어드는 거 할 수 있을 듯??! 
+    오 맞았어ㅋㅋㅋㅋ*/
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.material-icons{
+    color: white;
+}
+.body-container{
+    display: flex;
+    padding-top: 6rem;
+}
+.nav{
+    flex: 0 0 238px;
+    font-size: 1.5rem;
+    background-color: rgb(33, 33, 33);
+    padding-top: 2rem;
+    /*여기가 좀 이상해..
+    overflow: scroll;
+    height: 100%;
+    */
+}
+.nav_subscribe-name{
+    color: rgb(144, 144, 144);
+    padding-left: 2rem;
+}
+.nav_list{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav_icons-name{
+    color: white;
+}
+.nav_icons .material-icons{
+    color: rgb(144, 144, 144);
+}
+.nav_list:hover{
+    background-color: rgb(56, 56, 56);
+}
+.nav_icons{
+    flex: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.nav_icons-name{
+    flex: 5;
+}
+.nav-02{
+    display: none;
+    flex: 0 0 70px;
+    font-size: 1rem;
+    background-color: rgb(33, 33, 33);
+    padding-top: 2rem;
+}
+.nav-02_list{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.nav-02_list div{
+    text-align: center;
+    color: rgb(144, 144, 144)
+}
+.nav-02_list .material-icons{
+    color: rgb(144, 144, 144)
+}
+.nav-02_list:hover{
+    color: whitesmoke;
+    background-color: rgb(56, 56, 56);
+}
+.nav-02_icons{
+    flex: 1;
+}
+.nav-02_icons-name{
+    flex: 1;
+}
+.content{
+    flex: 0 1 auto;
+    font-size: 1.5rem;
+    background-color: rgb(24, 24, 24);
+}
+.content-videos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content img{
+    width: 100%;
+}
+.video{
+    width: 23%;
+    min-width: 25rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.video_info{
+    display: flex;
+}
+.video_info_profile{
+    flex: 1;
+}
+.video_info_text{
+    flex: 5;
+}
+.video_info_text div{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.video_info_text div{
+    color: white;
+}
+@media screen and (max-width: 1312px) {
+    .nav{
+        display: none;
+    }
+    .nav-02{
+        display: block;
+    }
+}
+@media screen and (max-width: 655px) {
+    input[type=text]{
+        display: none;
+    }
+}
