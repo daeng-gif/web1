@@ -131,17 +131,19 @@ input[type=text] {
     background-color: rgb(24, 24, 24);
 }
 .content-videos{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .content img{
     width: 100%;
 }
 .video{
-    width: 23%;
-    min-width: 25rem;
-    padding-left: 2rem;
-    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
 }
 .video_info{
     display: flex;
@@ -172,5 +174,22 @@ input[type=text] {
 @media screen and (max-width: 655px) {
     input[type=text]{
         display: none;
+    }
+}
+@media screen and (max-width: 887px) {
+    .content-videos{
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 807px) {
+    .nav{
+        display: none;
+    }
+    .nav-02{
+        display: none;
+    }
+    .content-videos{
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
